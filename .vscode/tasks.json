@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and Run C with Time (CMD)",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "gcc.exe -std=c11 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && echo Start: %time% && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\inputf.in\" > \"${fileDirname}\\outputf.out\" && echo End: %time%"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Compile and run with standard input/output and simple timing"
+        }
+    ]
+}
